@@ -1,9 +1,13 @@
 :root > * {
     margin: 0;
+
+    --border-color: rgb(0, 0, 0);
+    --background1: rgb(49, 49, 49);
+    --background2: rgb(0,0,0);
 }
 
 body{
-    background-image: linear-gradient(purple, black);
+    background-image: linear-gradient(var(--background1), var(--background2));
     background-repeat: no-repeat;
 
     height: 100vh;
@@ -14,8 +18,7 @@ body{
 
 
 .container > * {
-    border-radius: 10px;
-    border: solid 4px rgb(165, 57, 165);
+
 
 }
 
@@ -33,10 +36,13 @@ body{
 
 .header{
     grid-area: 1 / 2 / 1 / -1;
+    border-bottom: solid 2px var(--border-color);
 }
 
 .sidebar{
     grid-area: 1 / 1 / -1 / 1;
+
+    border-right: solid 2px var(--border-color);
 }
 
 .content{
@@ -54,9 +60,9 @@ body{
 }
 
 .item{
-    box-shadow: inset 10px 10px 20px black;
+    box-shadow: inset 10px 10px 30px var(--background1);
     border-radius: 10px;
-    border: solid 2px purple;
+    border: solid 2px var(--border-color);
 }
 
 .announcements{
