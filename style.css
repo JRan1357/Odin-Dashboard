@@ -26,14 +26,13 @@ body{
 
 
 .container{
+    padding-left: 10px;
     display: grid;
     
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: 1fr 2fr 2fr;
 
     height: 100%;
-
-
 }
 
 .header{
@@ -45,6 +44,16 @@ body{
     grid-area: 1 / 1 / -1 / 1;
 
     border-right: solid 2px var(--border-color);
+}
+
+.dashNav{
+    list-style: none;
+    font-weight: bold;
+}
+
+.dashItem{
+    text-decoration: none;
+    color: white;
 }
 
 .content{
@@ -86,3 +95,6 @@ body{
 .trending{
     grid-area: 3 / 4 / 3 / 4;
 }
+
+
+
