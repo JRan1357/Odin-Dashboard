@@ -7,10 +7,53 @@ html{
 }
 
 body{
-    background-image: linear-gradient(rgb(71, 71, 71), black);
+    background-image: linear-gradient(rgb(66, 66, 66), black);
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
 .container{
     display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+
+.sidebar{
+    grid-area: 1 / 1 / 5 / 1;
+    background-color: rgb(60, 60, 60);
+}
+
+.header{
+    grid-area: 1 / 2 / 2 / -1;
+    background-image: linear-gradient(rgb(66, 66, 66), black);
+    background-repeat: no-repeat;
+    border-bottom: solid 3px black;
+}
+
+.subcontent{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 4fr;
+}
+
+.content{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, minmax(300px, 1fr));
+}
+
+.item{
+    background-color: grey;
+    border-radius: 10px;;
+}
+
+.announcements{
+    background-color: aqua;
+}
+
+.trending{
+    background-color: purple;
 }
