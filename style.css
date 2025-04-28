@@ -2,13 +2,12 @@
     margin: 0;
 
     --border-color: rgb(0, 0, 0);
-    --background1: rgb(49, 49, 49);
-    --background2: rgb(0,0,0);
+    --background1: rgb(49, 9, 61);
+    --background2: rgb(94, 15, 114);
 }
 
 body{
-    background-image: linear-gradient(var(--background1), var(--background2));
-    background-repeat: no-repeat;
+    background-color: var(--background1);
 
     height: 100vh;
 
@@ -38,12 +37,16 @@ body{
 .header{
     grid-area: 1 / 2 / 1 / -1;
     border-bottom: solid 2px var(--border-color);
+
+    background-image: linear-gradient(to bottom, var(--background1), var(--background2));
 }
 
 .sidebar{
     grid-area: 1 / 1 / -1 / 1;
 
     border-right: solid 2px var(--border-color);
+
+    background-image: linear-gradient(to right, var(--background1), var(--background2));
 }
 
 .dashNav{
@@ -57,6 +60,10 @@ body{
 }
 
 .content{
+    background-color: var(--background1);
+    box-shadow: inset 0 0 50px 40px var(--background2);
+
+
     resize: both;
     overflow: auto;
 
@@ -66,18 +73,24 @@ body{
     grid-area: 2 / 2 / -1 / -2;
 
     grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
-    grid-auto-rows: minmax(200px, 400px);
+    grid-template-rows: minmax(40px, 60px) repeat(auto-fill, minmax(200px, 400px));
 
     justify-content: center;
-    align-content: center;
 
 }
 
+#contentTitle{
+    grid-area: 1 / 1 / 1 / -1;
+    border-bottom: solid 2px white;
+}
+
 .item{
-    box-shadow: inset 10px 10px 30px var(--background1);
+    box-shadow: inset 0 0 30px 10px var(--background2);
     border-radius: 10px;
 
     padding: 20px;
+
+    border: solid 1px var(--border-color);
 }
 .item > h2{
     border-bottom: solid 2px white;
@@ -90,10 +103,16 @@ body{
 
 .announcements{
     grid-area: 2 / 4 / 3 / -1;
+
+    background-image: linear-gradient(to left, var(--background1), var(--background2)); 
+    border-left: solid 2px var(--border-color);
 }
 
 .trending{
     grid-area: 3 / 4 / 3 / 4;
+
+    background-image: linear-gradient(to left, var(--background1), var(--background2));
+    border-left: solid 2px var(--border-color);
 }
 
 
