@@ -4,7 +4,7 @@
     --border-color: rgb(196, 0, 231);
     --background1: #31093d;
     --background2: #5e0f72;
-    --highlight: #c7a2ff;
+    --highlight: #e8c6ff;
 }
 
 body{
@@ -83,8 +83,11 @@ body{
 }
 
 #userInfo{
-    display: inline;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
 }
+
 
 
 .headerButton{
@@ -93,10 +96,7 @@ body{
     min-width: 80px;
 
     background-color: var(--highlight);
-    box-shadow: inset 0 0 10px 6px rgb(218, 150, 255);
-
-
-    
+    box-shadow: inset 0 0 10px 6px rgb(218, 150, 255);  
 }
 
 /* BORDER TO IMPROVE READABILITY */
@@ -108,7 +108,7 @@ header > * {
 .sidebar{
     grid-area: 1 / 1 / -1 / 1;
 
-    border-right: outset 10px var(--border-color);
+    border-right: outset 4px var(--border-color);
 
     background-image: linear-gradient(to right, var(--background1), var(--background2));
 
