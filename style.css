@@ -88,6 +88,15 @@ body{
     grid-template-rows: 1fr;
 }
 
+#userImg{
+    margin: auto;
+    border-radius: 50%;
+}
+
+#userWelcome{
+    font-size: medium;
+}
+
 
 
 .headerButton{
