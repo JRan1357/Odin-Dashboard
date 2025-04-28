@@ -1,5 +1,6 @@
 :root > * {
     margin: 0;
+    padding: 0;
 
     --border-color: rgb(196, 0, 231);
     --background1: #31093d;
@@ -87,6 +88,14 @@ body{
     display: grid;
     grid-template-columns: auto 5fr;
     grid-template-rows: 1fr;
+    height: 100px;
+    align-items: center;
+
+}
+
+#userTitle{
+    margin: 0;
+    padding: 0;
 }
 
 #userImg{
@@ -98,6 +107,9 @@ body{
 
 #userWelcome{
     font-size: medium;
+    padding: 0;
+    margin:0;
+    padding-bottom: 5px;
 }
 
 
