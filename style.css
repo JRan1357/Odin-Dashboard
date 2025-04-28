@@ -1,7 +1,7 @@
 :root > * {
     margin: 0;
 
-    --border-color: rgb(132, 132, 132);
+    --border-color: rgb(196, 0, 231);
     --background1: #31093d;
     --background2: #5e0f72;
     --highlight: #e076fa;
@@ -46,16 +46,17 @@ body{
 
 .header{
     grid-area: 1 / 2 / 1 / -1;
-    border-bottom: solid 2px var(--border-color);
     background-image: linear-gradient(to bottom, var(--background1), var(--background2));
-
+    border-bottom-right-radius: 20px;
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 3fr 1fr;
 
     align-items: center;
 
-    max-height: 250px;
+    max-height: 300px;
+
+    padding-left: 20px;
 }
 
 #headerSearchbarContainer{
@@ -90,9 +91,12 @@ header > * {
 .sidebar{
     grid-area: 1 / 1 / -1 / 1;
 
-    border-right: solid 2px var(--border-color);
+    border-right: outset 10px var(--border-color);
 
     background-image: linear-gradient(to right, var(--background1), var(--background2));
+
+    border-top-right-radius: 20px;
+
 }
 
 .dashNav{
@@ -109,6 +113,8 @@ header > * {
     background-color: var(--background1);
     box-shadow: inset 0 0 50px 40px var(--background2);
     background-image: url(assets/imgs/projectBackground.svg);
+
+    border-top: inset 1px var(--border-color);
 
 
     display: grid;
@@ -135,6 +141,7 @@ header > * {
     background-image: linear-gradient(var(--background1), var(--background2));
 
     padding: 20px;
+    margin: 30px;
 
     border: solid 1px var(--border-color);
 }
@@ -151,7 +158,7 @@ header > * {
     grid-area: 2 / 4 / 3 / -1;
 
     background-image: linear-gradient(to left, var(--background1), var(--background2)); 
-    border-left: solid 2px var(--border-color);
+    border-left: outset 1px var(--border-color);
 }
 
 .trending{
