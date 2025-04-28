@@ -1,16 +1,16 @@
 :root > * {
     margin: 0;
 
-    --border-color: rgb(0, 0, 0);
-    --background1: rgb(49, 9, 61);
-    --background2: rgb(94, 15, 114);
-    --highlight: rgb(0,0,0);
+    --border-color: rgb(132, 132, 132);
+    --background1: #31093d;
+    --background2: #5e0f72;
+    --highlight: #e076fa;
 }
 
 body{
     background-color: var(--background1);
 
-    height: 100vh;
+    height: 100%;
 
     color: white;
 
@@ -59,20 +59,24 @@ body{
 
 #headerSearchbarContainer{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 
     height: 20%;
 }
 
 #searchbar{
     width: 80%;
-    background-color: ;
+    background-color: var(--highlight);
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 600px;
     
 }
 
 /* BORDER TO IMPROVE READABILITY */
 
-.header > * {
+header > * {
     border: solid 2px green;
 }
 
@@ -97,13 +101,11 @@ body{
 .content{
     background-color: var(--background1);
     box-shadow: inset 0 0 50px 40px var(--background2);
+    background-image: url(assets/imgs/projectBackground.svg);
 
-
-    resize: both;
-    overflow: auto;
 
     display: grid;
-    gap: 15px;
+    gap: 30px;
 
     grid-area: 2 / 2 / -1 / -2;
 
@@ -117,11 +119,13 @@ body{
 #contentTitle{
     grid-area: 1 / 1 / 1 / -1;
     border-bottom: solid 2px white;
+    min-height: 48px;
 }
 
 .item{
     box-shadow: inset 0 0 30px 10px var(--background2);
     border-radius: 10px;
+    background-image: linear-gradient(var(--background1), var(--background2));
 
     padding: 20px;
 
