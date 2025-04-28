@@ -4,6 +4,7 @@
     --border-color: rgb(0, 0, 0);
     --background1: rgb(49, 9, 61);
     --background2: rgb(94, 15, 114);
+    --highlight: rgb(0,0,0);
 }
 
 body{
@@ -50,8 +51,29 @@ body{
     background-image: linear-gradient(to bottom, var(--background1), var(--background2));
 
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     grid-template-columns: 3fr 1fr;
+
+    align-items: center;
+}
+
+#headerSearchbarContainer{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    height: 20%;
+}
+
+#searchbar{
+    width: 80%;
+    background-color: ;
+    
+}
+
+/* BORDER TO IMPROVE READABILITY */
+
+.header > * {
+    border: solid 2px green;
 }
 
 .sidebar{
